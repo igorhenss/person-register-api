@@ -1,0 +1,19 @@
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: PERSON_REGISTER_API
+    password: PERSON_REGISTER_API
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle10gDialect
+        show_sql: false
+        format_sql: false
+  liquibase:
+    change-log: classpath:/liquibase/changelog.yaml
+server:
+  port: 8080
+  servlet:
+    context-path: /api
