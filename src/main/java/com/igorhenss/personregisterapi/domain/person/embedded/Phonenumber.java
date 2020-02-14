@@ -1,5 +1,7 @@
 package com.igorhenss.personregisterapi.domain.person.embedded;
 
+import com.igorhenss.personregisterapi.infrastructure.i18n.messages.Dictionary;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
@@ -7,11 +9,12 @@ import javax.persistence.Embeddable;
 public class Phonenumber {
 
 	@Column(name = "phonenumber", length = 40, nullable = false)
-	private final String phonenumber;
+	private String phonenumber;
+	
+	protected Phonenumber() {}
 	
 	public Phonenumber(String phonenumber) {
-		var digitsRegex = "[0-9]";
-		this.phonenumber = phonenumber.replaceAll(digitsRegex,"");
+		this.phonenumber = phonenumber.replaceAll(Dictionary.LETTERS_REGEX,"");
 	}
 	
 	public String getPhonenumber() {

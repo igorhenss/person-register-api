@@ -14,6 +14,7 @@ public class Dictionary {
 	public static final String EMAIL_MAX_SIZE_IS_160 = "email.max.size.is.160";
 	public static final String EMAIL_MIN_SIZE_IS_10 = "email.min.size.is.10";
 	public static final String EMAIL_MUST_BE_NOT_BLANK = "email.must.be.not.blank";
+	public static final String EMAIL_MUST_BE_NOT_NULL = "email.must.be.not.null";
 	public static final String EMAIL_MUST_BE_VALID = "email.must.be.valid";
 	public static final String NAME_MAX_SIZE_IS_40 = "name.max.size.is.40";
 	public static final String NAME_MIN_SIZE_IS_3 = "name.min.size.is.3";
@@ -24,8 +25,13 @@ public class Dictionary {
 	public static final String PHONENUMBER_MUST_BE_NOT_BLANK = "phonenumber.must.be.not.blank";
 	public static final String PHONENUMBER_MUST_BE_NOT_NULL = "phonenumber.must.be.not.null";
 	
+	public static final String PERSON_ALREADY_ACTIVE = "person.status.is.already.active";
+	public static final String PERSON_ALREADY_INACTIVE = "person.status.is.already.inactive";
+	public static final String PERSON_MUST_BE_ACTIVE_TO_UPDATE = "person.status.must.be.active.to.update";
+	public static final String PERSON_NOT_FOUND = "person.not.found";
+	
 	public static final String SPECIAL_CHARS_REGEX = "[-+.^:,]";
 	public static final String DIGITS_REGEX = "\\d";
-	public static final String LETTERS_REGEX = "[^A-Za-z]";
+	public static final String LETTERS_REGEX = "[^\\d-.]";
 	
 }

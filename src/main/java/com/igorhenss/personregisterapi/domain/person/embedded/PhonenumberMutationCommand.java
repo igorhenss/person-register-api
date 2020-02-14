@@ -20,7 +20,7 @@ public class PhonenumberMutationCommand implements Serializable {
 	public PhonenumberMutationCommand() {}
 	
 	public String getPhonenumberWithoutSpecialCharacters() {
-		var phonenumberWithoutSpecialChars = phonenumber.replaceAll(Dictionary.SPECIAL_CHARS_REGEX, "");
+		String phonenumberWithoutSpecialChars = phonenumber.replaceAll(Dictionary.SPECIAL_CHARS_REGEX, "");
 		return phonenumberWithoutSpecialChars.replaceAll(Dictionary.LETTERS_REGEX, "");
 	}
 	

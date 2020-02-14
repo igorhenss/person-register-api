@@ -6,8 +6,10 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class Address {
 	
-	@Column(name = "address", length = 160, nullable = false)
-	private final String address;
+	@Column(name = "address", length = 256, nullable = false)
+	private String address;
+	
+	protected Address() {}
 	
 	public Address(String address) {
 		this.address = address;

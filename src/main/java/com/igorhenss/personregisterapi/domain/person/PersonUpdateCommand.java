@@ -16,22 +16,17 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonMutationCommand implements Serializable {
+public class PersonUpdateCommand implements Serializable {
 	
 	private static final long serialVersionUID = 7881649587888614593L;
 	
-	@NotNull(message = Dictionary.BIRTHDATE_MUST_BE_NOT_NULL)
 	@PastOrPresent(message = Dictionary.BIRTHDATE_MUST_BE_PAST_OR_PRESENT)
 	private LocalDate birthdate;
 	
-	@NotNull(message = Dictionary.NAME_MUST_BE_NOT_NULL)
-	@NotBlank(message = Dictionary.NAME_MUST_BE_NOT_BLANK)
 	@Size(max = 40, message = Dictionary.NAME_MAX_SIZE_IS_40)
 	@Size(min = 4, message = Dictionary.NAME_MIN_SIZE_IS_3)
 	private String name;
 	
-	@NotNull(message = Dictionary.CPF_MUST_BE_NOT_NULL)
-	@NotBlank(message = Dictionary.CPF_MUST_BE_NOT_BLANK)
 	@CPF(message = Dictionary.CPF_MUST_BE_VALID)
 	private String cpf;
 	
@@ -41,7 +36,7 @@ public class PersonMutationCommand implements Serializable {
 	
 	private List<@Valid AddressMutationCommand> addresses = new ArrayList<>();
 	
-	public PersonMutationCommand() {}
+	public PersonUpdateCommand() {}
 	
 	public String getCpfWithoutSpecialCharacters() {
 		return cpf.replaceAll(Dictionary.SPECIAL_CHARS_REGEX, "");

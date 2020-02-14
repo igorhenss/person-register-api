@@ -1,0 +1,43 @@
+address:
+  max.size.is.160: Address maximum size is one hundred and sixty (160)
+  min.size.is.10: Address minimum size is ten (10)
+  must.be.not:
+    blank: Address must be not blank
+    null: Address must be not null
+birthdate.must.be:
+  not.null: Birthdate must be not null
+  past.or.present: Birthdate must be past or present
+cpf.must.be.not:
+  blank: CPF must be not blank
+  null: CPF must be not null
+  valid: CPF must be not valid
+email:
+  max.size.is.160: Email maximum size is one hundred and sixty (160)
+  min.size.is.10: Email minimum size is ten (10)
+  must.be:
+    not.blank: Email must be not blank
+    not.null: Email must be not null
+    valid: Email must be valid
+name:
+  max.size.is.40: Name maximum size is forty (40)
+  min.size.is.3: Name minimum size is three (3)
+  must.be.not:
+    blank: Name must be not blank
+    null: Name must be not null
+identifier.must.be.not:
+  blank: Identifier must be not blank
+  null: Identifier must be not null
+phonenumber:
+  max.size.is.40: Phonenumber maximum size is forty (40)
+  min.size.is.5: Phonenumber minimum size is five (5)
+  must.be.not:
+    blank: Phonenumber must be not blank
+    null: Phonenumber must be not null
+
+person:
+  status:
+    is.already:
+      active: Person {0} status is already active
+      inactive: Person {0} status is already inactive
+    must.be.active.to.update: Person {0} status must be active to be updated
+  not.found: Person {0} not found

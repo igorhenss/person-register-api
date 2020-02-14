@@ -2,10 +2,15 @@ package com.igorhenss.personregisterapi.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
+@MappedSuperclass
 public class AbstractEntity {
+	
+	public static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss - dd/MM/yyyy");
 	
 	@Id
 	@Column(name = "id", nullable = false, unique = true)

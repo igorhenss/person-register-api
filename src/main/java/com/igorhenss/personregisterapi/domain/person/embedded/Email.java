@@ -7,7 +7,9 @@ import javax.persistence.Embeddable;
 public class Email {
 	
 	@Column(name = "email", length = 160, nullable = false, unique = true)
-	private final String email;
+	private String email;
+	
+	protected Email() {}
 	
 	public Email(String email) {
 		this.email = email;
